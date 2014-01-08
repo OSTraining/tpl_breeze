@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
-<install version="1.6" type="template" client="site">
-	<name>OSTraining: Breeze Red</name>
-	<creationDate>June 2009</creationDate>
-	<author>OSTraining.com</author>
-	<copyright>Copyright (c) 2009 siteCoffee. All rights reserved.</copyright>
-	<authorEmail>info@ostraining.com</authorEmail>
-	<authorUrl>www.OSTraining.com</authorUrl>
-	<version>1.1</version>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>OSTraining: Breeze</name>
+	<creationDate>December 2014</creationDate>
+	<author>OSTraining</author>
+    <copyright>Copyright (C) 2009, 2013 OSTraining.com</copyright>
+    <license>GPL v3</license>
+    <authorEmail>info@ostraining.com</authorEmail>
+    <authorUrl>http://www.ostraining.com</authorUrl>
+	<version>2.1</version>
 	<description>A professional grade template by OSTraining.com.</description>
 	<files>
 		<filename>index.html</filename>
@@ -16,21 +17,9 @@
 		<filename>readme.txt</filename>
 		<filename>template_thumbnail.png</filename>
 		<filename>templateDetails.xml</filename>
-		<filename>images/index.html</filename>
-		<filename>images/sprite_content.png</filename>
-		<filename>images/sprite_modules.png</filename>
-		<filename>css/index.html</filename>
-		<filename>css/editor.css</filename>
-		<filename>css/editor_content.css</filename>
-		<filename>css/print.css</filename>
-		<filename>css/template.css</filename>
-		<filename>html/index.html</filename>
-		<filename>html/pagination.php</filename>
-		<filename>html/com_search/index.html</filename>
-		<filename>html/com_search/search/index.html</filename>
-		<filename>html/com_search/search/default_error.php</filename>
-		<filename>html/com_search/search/default_form.php</filename>
-		<filename>html/com_search/search/default_results.php</filename>
+		<folder>images</folder>
+        <folder>css</folder>
+		<folder>html</folder>
 	</files>
 	<positions>
 		<position>user1</position>
@@ -61,4 +50,4 @@
 			</fieldset>
 		</fields>
 	</config>
-</install>
+</extension>

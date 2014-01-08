@@ -160,7 +160,7 @@ table.contentpane, table.contentpaneopen {
 
 /* Text Styles */
 a:link, a:visited {
-	color:#c00;
+	color:#39f;
 	text-decoration:none;
 	}
 a:hover {
@@ -177,7 +177,7 @@ ol, ul {
 	margin:5px 0 5px 20px;
 	}
 #center h1, .componentheading, .contentheading {
-	color:#c00;
+	color:#39f;
 	font:normal 2.2em Trebuchet MS, Helvetica, sans-serif;
 	letter-spacing:-1px;
 	padding:20px 0 0;
@@ -188,7 +188,7 @@ ol, ul {
 	padding:0;
 	}
 #center h2 {
-	color:#c00;
+	color:#39f;
 	font:normal 1.6em Trebuchet MS, Helvetica, sans-serif;
 	margin:20px 0 10px;
 	}
@@ -377,7 +377,7 @@ ul.pagination .prevnext {
   padding:0 3px;
   }
 ul.pagination .prevnext a:hover {
-  background:#c00;
+  background:#39f;
   color:#fff;
   text-decoration:none;
   }
@@ -408,7 +408,7 @@ ul.pagination .pagenum a:hover {
 	}
 #center .moduletable {
 	border-bottom:1px solid #ddd;
-	color:#c00;
+	color:#39f;
 	font-size:1.3em;
 	line-height:1.3;
 	margin:0 0 10px;
@@ -584,7 +584,7 @@ ul.pagination .pagenum a:hover {
 	padding:8px 10px;
 	}
 #menu li li#current a, #menu li ul a:hover {
-	border-bottom:4px solid #c00;
+	border-bottom:4px solid #39f;
 	color:#fff;
 	}
 #menu li:hover {
@@ -620,7 +620,7 @@ ul.pagination .pagenum a:hover {
 #contentholder .module_menu .menu li.active li a {
 	background:transparent;
 	border-bottom:1px solid #ddd;
-	color:#c00;
+	color:#39f;
 	}
 #contentholder .module_menu .menu li.active li.active a, #contentholder .module_menu .menu li.active li a:hover {
 	background: #fff url(../images/sprite_content.png) -460px -200px no-repeat;
@@ -630,7 +630,7 @@ ul.pagination .pagenum a:hover {
 #contentholder .module_menu .menu li.active li.active li a {
 	background:transparent;
 	border-bottom:1px solid #fff;
-	color:#c00;
+	color:#39f;
 	}
 #contentholder .module_menu .menu li.active li.active li a:hover {
 	text-decoration:underline;
@@ -642,3 +642,28 @@ ul.pagination .pagenum a:hover {
 	margin:0 0 10px 10px;
 	list-style:none;
 	}
+
+.actions{
+margin:0;
+}
+.actions li{
+list-style: none;
+display:inline;
+float:right;
+}
+
+table.category{
+border:1px solid #CCC;
+width:100%;
+text-align:center;
+}
+table.category th,table.category td{
+padding:2px 6px;
+}
+table.category thead{
+background:#EEE;
+}
+.jcat-children ul,.jcat-children li{
+margin:0;
+list-style:none;
+}
