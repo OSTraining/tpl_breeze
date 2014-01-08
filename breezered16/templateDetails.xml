@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<install version="1.6" type="template" client="site">
+	<name>OSTraining: Breeze Red</name>
+	<creationDate>June 2009</creationDate>
+	<author>OSTraining.com</author>
+	<copyright>Copyright (c) 2009 siteCoffee. All rights reserved.</copyright>
+	<authorEmail>info@ostraining.com</authorEmail>
+	<authorUrl>www.OSTraining.com</authorUrl>
+	<version>1.1</version>
+	<description>A professional grade template by OSTraining.com.</description>
+	<files>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>license.txt</filename>
+		<filename>readme.txt</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>images/index.html</filename>
+		<filename>images/sprite_content.png</filename>
+		<filename>images/sprite_modules.png</filename>
+		<filename>css/index.html</filename>
+		<filename>css/editor.css</filename>
+		<filename>css/editor_content.css</filename>
+		<filename>css/print.css</filename>
+		<filename>css/template.css</filename>
+		<filename>html/index.html</filename>
+		<filename>html/pagination.php</filename>
+		<filename>html/com_search/index.html</filename>
+		<filename>html/com_search/search/index.html</filename>
+		<filename>html/com_search/search/default_error.php</filename>
+		<filename>html/com_search/search/default_form.php</filename>
+		<filename>html/com_search/search/default_results.php</filename>
+	</files>
+	<positions>
+		<position>user1</position>
+		<position>user2</position>
+		<position>user3</position>
+		<position>user4</position>
+		<position>user5</position>
+		<position>slides</position>
+		<position>top</position>
+		<position>breadcrumb</position>
+		<position>left</position>
+		<position>right</position>
+		<position>footer</position>
+		<position>syndicate</position>
+		<position>copyright</position>
+		<position>debug</position>
+	</positions>
+	<config>
+		<fields name="params">	
+			<fieldset name="advanced">
+			
+				<field name="defaultJS" type="radio" default="on" label="Default Joomla JavaScript" description="By default, Joomla loads several JavaScript files whether they are needed or not. These files are around 75KB in size. To decrease page load time you can try turning these files off, but make sure to test your website after you do as some extensions won't function properly without them.">
+							<option value="on">On</option>
+							<option value="off">Off</option>
+							
+				</field>
+			
+			</fieldset>
+		</fields>
+	</config>
+</install>
