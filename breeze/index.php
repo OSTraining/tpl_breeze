@@ -1,73 +1,126 @@
 <?php
-	$columns = NULL;
-	$editmode = NULL;
-	$taskmode = JRequest::getCmd('task');
-	if ($taskmode == "edit") $editmode = 1;
-	if ($this->countModules('left + right') <= 0) $columns="nocolumns";
-	elseif ($this->countModules('left') >= 1 && $this->countModules('right') <= 0) $columns="leftcolumn";
-	elseif ($this->countModules('right') >= 1 && $this->countModules('left') <= 0) $columns="rightcolumn";
-	elseif ($this->countModules('right') >= 1 && $this->countModules('left') >= 1 && $editmode) $columns="leftcolumn";
-	$joomlaJS = $this->params->get('defaultJS');
-	if (($joomlaJS == "off") && (!$editmode)) {
-		$headerjs = $this->getHeadData();
-		$headerjs['scripts'] = array();
-		$this->setHeadData($headerjs);
-	};
-	defined('_JEXEC') or die;
-	$app = JFactory::getApplication();
+/**
+ * @package     Joomla.Site
+ * @subpackage  Templates.ostrainingbreeze
+ *
+ * @copyright   Copyright (C) 2009, 2013 OSTraining.com
+ * @license     GNU General Public License version 2 or later; see license.txt
+ */
+
+defined('_JEXEC') or die;
+
+// Getting params from template
+$params = JFactory::getApplication()->getTemplate(true)->params;
+
+$app = JFactory::getApplication();
+$doc = JFactory::getDocument();
+$this->language = $doc->language;
+$this->direction = $doc->direction;
+
+// Detecting Active Variables
+$option   = $app->input->getCmd('option', '');
+$view     = $app->input->getCmd('view', '');
+$layout   = $app->input->getCmd('layout', '');
+$task     = $app->input->getCmd('task', '');
+$itemid   = $app->input->getCmd('Itemid', '');
+$sitename = $app->getCfg('sitename');
+
+// Adjusting content width
+if ($this->countModules('left') && $this->countModules('right'))
+{
+    $span_component = "span6";
+}
+elseif ($this->countModules('left') && !$this->countModules('right'))
+{
+    $span_component = "span9";
+}
+elseif (!$this->countModules('left') && $this->countModules('right'))
+{
+    $span_component = "span9";
+}
+else
+{
+    $span_component = "span12";
+}
+
+// Add JavaScript Frameworks
+JHtml::_('bootstrap.framework');
+$doc->addScript('templates/' .$this->template. '/js/template.js');
+
+// Add Stylesheets
+$doc->addStyleSheet('templates/'.$this->template.'/css/template.css');
+$doc->addStyleSheet('templates/system/css/general.css');
+
+// Load optional RTL Bootstrap CSS
+JHtml::_('bootstrap.loadCss', false, $this->direction);
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
-
 <head>
 	<jdoc:include type="head" />
-	<link rel="stylesheet" href="templates/<?php echo $this->template ?>/css/template.css" type="text/css"/>
-	<link rel="stylesheet" href="templates/<?php echo $this->template ?>/css/print.css" type="text/css" media="print" />
-	<?php if ($editmode) echo '<link rel="stylesheet" href="/templates/system/css/general.css" type="text/css" />'."\n"; ?>
 </head>
+<body class="myitemid-<?php echo $itemid; ?>">
 
-<body>
-
-<div id="page">
-	<div id="header">
-		<div id="logo"><a href="<?php echo JURI::base() ?>" class="title"><?php echo $app->getCfg('sitename'); ?></a></div>
-		<div id="menu"><jdoc:include type="modules" name="user3" style="none" /></div>
-		<div id="sitenav"><jdoc:include type="modules" name="user4" style="xhtml" /></div>
-	</div>
-	<jdoc:include type="modules" name="slides" style="none" />
-	<div id="contentholder" class="<?php echo $columns ? $columns : 'threecolumns' ?>">
-		<div id="center">
-			<jdoc:include type="modules" name="breadcrumb" style="none" />
-			<jdoc:include type="modules" name="top" style="xhtml" />
-			<jdoc:include type="message" />
-			<jdoc:include type="component" />
-		</div>
-		<div id="left"><jdoc:include type="modules" name="position-7" style="rounded" /></div>
-		<div id="right"><jdoc:include type="modules" name="right" style="rounded" /></div>
-		<span class="clear">&nbsp;</span>
-		<div id="bottom"><jdoc:include type="modules" name="footer" style="xhtml" /></div>
-	</div>
-</div>
-	
-<div id="footer">
-	<?php if ($this->countModules('user1 or user2 or user5')) { ?>
-		<div id="footer_panel"><div id="panel_bottom">
-			<div class="column"><jdoc:include type="modules" name="user1" style="xhtml" /></div>
-			<div class="column"><jdoc:include type="modules" name="user2" style="xhtml" /></div>
-			<div class="column"><jdoc:include type="modules" name="user5" style="xhtml" /></div>
-			<span class="clear">&nbsp;</span>
-		</div></div>
-	<?php }; ?>
-	<div id="footer_other">
-		<div id="copyright">
-			<jdoc:include type="modules" name="syndicate" style="none" />
-			<jdoc:include type="modules" name="copyright" style="none" />
-		</div>
-		<span class="clear">&nbsp;</span>
-	</div>
-</div>
-
-<jdoc:include type="modules" name="debug" style="none" />
+    <!-- Body -->
+    <div class="body">
+        <div class="container">
+            <!-- Header -->
+            <header class="row-fluid" role="banner">
+                <div class="span3">
+                    <a class="brand pull-left" href="<?php echo $this->baseurl; ?>">
+                        <?php echo $sitename; ?>
+                    </a>
+                </div>
+                <div class="span9">
+                    <div class="header-search pull-right">
+                        <jdoc:include type="modules" name="top" style="none" />
+                    </div>
+                </div>
+            </header>
+            <?php if ($this->countModules('menu')) : ?>
+                <nav class="navigation" role="navigation">
+                    <jdoc:include type="modules" name="menu" style="none" />
+                </nav>
+            <?php endif; ?>
+            <jdoc:include type="modules" name="banner" style="xhtml" />
+            <div class="row-fluid">
+                <?php if ($this->countModules('left')) : ?>
+                    <!-- Start Left -->
+                    <div id="left-content" class="span3">
+                        <div class="sidebar-nav">
+                            <jdoc:include type="modules" name="left" style="xhtml" />
+                        </div>
+                    </div>
+                    <!-- Start Left -->
+                <?php endif; ?>
+                <!-- Start Content -->
+                <main id="content" role="main" class="<?php echo $span_component; ?>">
+                    <jdoc:include type="modules" name="bodytop" style="xhtml" />
+                    <jdoc:include type="message" />
+                    <jdoc:include type="component" />
+                    <jdoc:include type="modules" name="bodybottom" style="xhtml" />
+                </main>
+                <!-- End Content -->
+                <?php if ($this->countModules('right')) : ?>
+                    <div id="right-content" class="span3">
+                        <!-- Start Right -->
+                        <jdoc:include type="modules" name="right" style="xhtml" />
+                        <!-- End Right -->
+                    </div>
+                <?php endif; ?>
+            </div>
+            <jdoc:include type="modules" name="bottom" style="xhtml" />
+        </div>
+    </div>
+    <!-- Start Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <jdoc:include type="modules" name="footer" style="none" />
+            <p>&copy; <?php echo $sitename; ?> <?php echo date('Y');?></p>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <jdoc:include type="modules" name="debug" style="none" />
 </body>
 </html>

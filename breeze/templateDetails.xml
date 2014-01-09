@@ -1,53 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="3.1" type="template" client="site">
-	<name>OSTraining: Breeze</name>
-	<creationDate>December 2014</creationDate>
-	<author>OSTraining</author>
+    <name>OSTraining: Breeze</name>
+    <creationDate>December 2014</creationDate>
+    <author>OSTraining</author>
     <copyright>Copyright (C) 2009, 2013 OSTraining.com</copyright>
     <license>GPL v3</license>
     <authorEmail>info@ostraining.com</authorEmail>
     <authorUrl>http://www.ostraining.com</authorUrl>
-	<version>2.1</version>
-	<description>A professional grade template by OSTraining.com.</description>
-	<files>
-		<filename>index.html</filename>
-		<filename>index.php</filename>
-		<filename>license.txt</filename>
-		<filename>readme.txt</filename>
-		<filename>template_thumbnail.png</filename>
-		<filename>templateDetails.xml</filename>
-		<folder>images</folder>
+    <version>2.1</version>
+    <description>A professional grade template by OSTraining.com.</description>
+    <files>
+        <filename>index.html</filename>
+        <filename>index.php</filename>
+        <filename>license.txt</filename>
+        <filename>readme.txt</filename>
+        <filename>template_thumbnail.png</filename>
+        <filename>templateDetails.xml</filename>
+        <folder>images</folder>
         <folder>css</folder>
-		<folder>html</folder>
-	</files>
-	<positions>
-		<position>user1</position>
-		<position>user2</position>
-		<position>user3</position>
-		<position>user4</position>
-		<position>user5</position>
-		<position>slides</position>
-		<position>top</position>
-		<position>breadcrumb</position>
-		<position>left</position>
-		<position>right</position>
-		<position>footer</position>
-		<position>syndicate</position>
-		<position>copyright</position>
-		<position>debug</position>
-	</positions>
-	<config>
-		<fields name="params">	
-			<fieldset name="advanced">
-			
-				<field name="defaultJS" type="radio" default="on" label="Default Joomla JavaScript" description="By default, Joomla loads several JavaScript files whether they are needed or not. These files are around 75KB in size. To decrease page load time you can try turning these files off, but make sure to test your website after you do as some extensions won't function properly without them.">
-							<option value="on">On</option>
-							<option value="off">Off</option>
-							
-				</field>
-			
-			</fieldset>
-		</fields>
-	</config>
+        <folder>js</folder>
+        <folder>html</folder>
+    </files>
+    <positions>
+        <position>top</position>
+        <position>menu</position>
+        <position>banner</position>
+        <position>left</position>
+        <position>bodytop</position>
+        <position>bodybottom</position>
+        <position>right</position>
+        <position>footer</position>
+        <position>bottom</position>
+        <position>debug</position>
+    </positions>
+    <config>
+        <fields name="params">
+            <fieldset name="advanced">
+                <field name="defaultJS" type="radio" default="on" label="Default Joomla JavaScript" description="By default, Joomla loads several JavaScript files whether they are needed or not. These files are around 75KB in size. To decrease page load time you can try turning these files off, but make sure to test your website after you do as some extensions won't function properly without them.">
+                    <option value="on">On</option>
+                    <option value="off">Off</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
 </extension>
