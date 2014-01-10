@@ -43,6 +43,15 @@ else
     $span_component = "span12";
 }
 
+// Logo file
+if ($this->params->get('logoFile'))
+{
+    $logo = '<img src="' . JUri::root() . $this->params->get('logoFile') . '" alt="'. $sitename .'" />';
+}else
+{
+    $logo = '<img src="' . JUri::root() . 'templates/' . $this->template . '/images/logo.png" alt="'. $sitename .'" />';
+}
+
 // Add JavaScript Frameworks
 JHtml::_('bootstrap.framework');
 $doc->addScript('templates/' .$this->template. '/js/template.js');
@@ -59,6 +68,20 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
 <head>
 	<jdoc:include type="head" />
+    <?php
+    // Use of Google Font
+    if ($this->params->get('googleFont'))
+    {
+        ?>
+        <link href='//fonts.googleapis.com/css?family=<?php echo $this->params->get('googleFontName');?>' rel='stylesheet' type='text/css' />
+        <style type="text/css">
+            body{
+                font-family: '<?php echo str_replace('+', ' ', $this->params->get('googleFontName'));?>', sans-serif;
+            }
+        </style>
+    <?php
+    }
+    ?>
 </head>
 <body class="myitemid-<?php echo $itemid; ?>">
 
@@ -69,7 +92,7 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
             <header class="row-fluid" role="banner">
                 <div class="span3">
                     <a class="brand pull-left" href="<?php echo $this->baseurl; ?>">
-                        <?php echo $sitename; ?>
+                        <?php echo $logo; ?>
                     </a>
                 </div>
                 <div class="span9">

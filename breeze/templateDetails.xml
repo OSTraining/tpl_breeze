@@ -13,6 +13,7 @@
     <files>
         <filename>index.html</filename>
         <filename>index.php</filename>
+        <filename>favicon.ico</filename>
         <filename>license.txt</filename>
         <filename>readme.txt</filename>
         <filename>template_thumbnail.png</filename>
@@ -37,10 +38,23 @@
     <config>
         <fields name="params">
             <fieldset name="advanced">
-                <field name="defaultJS" type="radio" default="on" label="Default Joomla JavaScript" description="By default, Joomla loads several JavaScript files whether they are needed or not. These files are around 75KB in size. To decrease page load time you can try turning these files off, but make sure to test your website after you do as some extensions won't function properly without them.">
-                    <option value="on">On</option>
-                    <option value="off">Off</option>
+                <field name="logoFile" class="" type="media" default=""
+                       label="Logo"
+                       description="Set your custom PNG or JPG logo image" />
+                <field name="googleFont"
+                       type="radio"
+                       class="btn-group btn-group-yesno"
+                       default="1"
+                       label="Enable Google font?"
+                       description="Do you want to use Google Font?"
+                        >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
                 </field>
+
+                <field name="googleFontName" class="" type="text" default="Open+Sans:400,300,300italic,700,600,800"
+                       label="Google Font Name"
+                       description="Set your Google Font. i.e. Open+Sans" />
             </fieldset>
         </fields>
     </config>
