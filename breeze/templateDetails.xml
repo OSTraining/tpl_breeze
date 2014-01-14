@@ -31,8 +31,12 @@
         <position>bodytop</position>
         <position>bodybottom</position>
         <position>right</position>
-        <position>footer</position>
-        <position>bottom</position>
+        <position>footer-a</position>
+        <position>footer-b</position>
+        <position>footer-c</position>
+        <position>bottom-a</position>
+        <position>bottom-b</position>
+        <position>bottom-c</position>
         <position>debug</position>
     </positions>
     <config>

@@ -25,7 +25,7 @@ $task     = $app->input->getCmd('task', '');
 $itemid   = $app->input->getCmd('Itemid', '');
 $sitename = $app->getCfg('sitename');
 
-// Adjusting content width
+// Adjusting main content width
 if ($this->countModules('left') && $this->countModules('right'))
 {
     $span_component = "span6";
@@ -41,6 +41,26 @@ elseif (!$this->countModules('left') && $this->countModules('right'))
 else
 {
     $span_component = "span12";
+}
+
+// Adjusting bottom width
+if ($this->countModules('bottom-a and bottom-b and bottom-c'))
+{
+    $span_bottom = "span4";
+}elseif($this->countModules('bottom-a xor bottom-b xor bottom-c')){
+    $span_bottom = "span12";
+}else{
+    $span_bottom = "span6";
+}
+
+// Adjusting footer width
+if ($this->countModules('footer-a and footer-b and footer-c'))
+{
+    $span_footer = "span4";
+}elseif($this->countModules('footer-a xor footer-b xor footer-c')){
+    $span_footer = "span12";
+}else{
+    $span_footer = "span6";
 }
 
 // Logo file
@@ -59,6 +79,7 @@ $doc->addScript('templates/' .$this->template. '/js/template.js');
 // Add Stylesheets
 $doc->addStyleSheet('templates/'.$this->template.'/css/template.css');
 $doc->addStyleSheet('templates/system/css/general.css');
+$doc->addStyleSheet('templates/'.$this->template.'/css/font-awesome/css/font-awesome.min.css');
 
 // Load optional RTL Bootstrap CSS
 JHtml::_('bootstrap.loadCss', false, $this->direction);
@@ -133,14 +154,67 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
                     </div>
                 <?php endif; ?>
             </div>
-            <jdoc:include type="modules" name="bottom" style="xhtml" />
+            <!-- Start bottom -->
+            <?php if ($this->countModules('bottom-a or bottom-b or bottom-c')) : ?>
+                <div class="row-fluid" id="bottom">
+                    <?php if ($this->countModules('bottom-a')) : ?>
+                        <!-- Start bottom-a -->
+                        <div id="bottom-a" class="<?php echo $span_bottom; ?>">
+                            <jdoc:include type="modules" name="bottom-a" style="well" />
+                        </div>
+                        <!-- End bottom-a -->
+                    <?php endif; ?>
+                    <?php if ($this->countModules('bottom-b')) : ?>
+                        <!-- Start bottom-b -->
+                        <div id="bottom-b" class="<?php echo $span_bottom; ?>">
+                            <jdoc:include type="modules" name="bottom-b" style="well" />
+                        </div>
+                        <!-- End bottom-b -->
+                    <?php endif; ?>
+                    <?php if ($this->countModules('bottom-c')) : ?>
+                        <!-- Start bottom-c -->
+                        <div id="bottom-c" class="<?php echo $span_bottom; ?>">
+                            <jdoc:include type="modules" name="bottom-c" style="well" />
+                        </div>
+                        <!-- End bottom-c -->
+                    <?php endif; ?>
+                </div>
+            <?php endif; ?>
+            <!-- End bottom -->
         </div>
     </div>
     <!-- Start Footer -->
     <footer class="footer" role="contentinfo">
         <div class="container">
-            <jdoc:include type="modules" name="footer" style="none" />
-            <p>&copy; <?php echo $sitename; ?> <?php echo date('Y');?></p>
+            <jdoc:include type="modules" name="footer" style="xhtml" />
+            <!-- Start bottom -->
+            <?php if ($this->countModules('footer-a or footer-b or footer-c')) : ?>
+                <div class="row-fluid" id="footer">
+                    <?php if ($this->countModules('footer-a')) : ?>
+                        <!-- Start footer-a -->
+                        <div id="footer-a" class="<?php echo $span_footer; ?>">
+                            <jdoc:include type="modules" name="footer-a" style="footer" />
+                        </div>
+                        <!-- End footer-a -->
+                    <?php endif; ?>
+                    <?php if ($this->countModules('footer-b')) : ?>
+                        <!-- Start footer-b -->
+                        <div id="footer-b" class="<?php echo $span_footer; ?>">
+                            <jdoc:include type="modules" name="footer-b" style="footer" />
+                        </div>
+                        <!-- End footer-b -->
+                    <?php endif; ?>
+                    <?php if ($this->countModules('footer-c')) : ?>
+                        <!-- Start footer-c -->
+                        <div id="footer-c" class="<?php echo $span_footer; ?>">
+                            <jdoc:include type="modules" name="footer-c" style="footer" />
+                        </div>
+                        <!-- End footer-c -->
+                    <?php endif; ?>
+                </div>
+            <?php endif; ?>
+            <!-- End footer -->
+            <p class="copyright-ost">&copy; <?php echo $sitename; ?> <?php echo date('Y');?></p>
         </div>
     </footer>
     <!-- End Footer -->

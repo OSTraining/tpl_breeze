@@ -47,4 +47,18 @@ function modChrome_well($module, &$params, &$attribs)
 		echo "</div>";
 	}
 }
+
+function modChrome_footer($module, &$params, &$attribs)
+{
+    if ($module->content)
+    {
+        echo "<div class=\"modtitle " . htmlspecialchars($params->get('moduleclass_sfx')) . "\">";
+        if ($module->showtitle)
+        {
+            echo "<h3 class=\"page-header\">" . $module->title . "</h3>";
+        }
+        echo $module->content;
+        echo "</div>";
+    }
+}
 ?>
