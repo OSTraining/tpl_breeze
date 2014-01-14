@@ -106,7 +106,7 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
                     <jdoc:include type="modules" name="menu" style="none" />
                 </nav>
             <?php endif; ?>
-            <jdoc:include type="modules" name="banner" style="xhtml" />
+            <jdoc:include type="modules" name="banner" style="well" />
             <div class="row-fluid">
                 <?php if ($this->countModules('left')) : ?>
                     <!-- Start Left -->
