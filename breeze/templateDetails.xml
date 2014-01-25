@@ -59,6 +59,7 @@
                 <field name="googleFontName" class="" type="text" default="Open+Sans:400,300,300italic,700,600,800"
                        label="Google Font Name"
                        description="Set your Google Font. i.e. Open+Sans" />
+                <field name="colorScheme" type="color" default="#2184CD" label="Color scheme" description="Set Color links, menu and other elements" />
             </fieldset>
         </fields>
     </config>

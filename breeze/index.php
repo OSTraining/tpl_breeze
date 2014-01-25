@@ -72,6 +72,9 @@ if ($this->params->get('logoFile'))
     $logo = '<img src="' . JUri::root() . 'templates/' . $this->template . '/images/logo.png" alt="'. $sitename .'" />';
 }
 
+// color scheme
+$color_scheme = $this->params->get('colorScheme', '#2184CD');
+
 // Add JavaScript Frameworks
 JHtml::_('bootstrap.framework');
 $doc->addScript('templates/' .$this->template. '/js/template.js');
@@ -89,6 +92,21 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
 <head>
 	<jdoc:include type="head" />
+    <style>
+        a{
+            color:<?php echo $color_scheme; ?>;
+        }
+        #footer h3.page-header{
+            border-color:<?php echo $color_scheme; ?>;
+        }
+        .btn-primary, .navigation, #mainmenu > li > ul > li > a:hover,
+        .navigation .nav-child li > a:hover,
+        .navigation .nav-child li > a:focus,
+        .navigation .nav-child:hover > a{
+            background-color:<?php echo $color_scheme; ?>;
+            *background-color:<?php echo $color_scheme; ?>;
+        }
+    </style>
     <?php
     // Use of Google Font
     if ($this->params->get('googleFont'))

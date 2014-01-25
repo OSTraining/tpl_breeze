@@ -224,7 +224,7 @@ a {
 }
 a:hover,
 a:focus {
-	color: #41a1d6;
+	color: #666;
 	text-decoration: underline;
 }
 .img-rounded {
@@ -2892,7 +2892,7 @@ input[type="submit"].btn.btn-mini {
 #mainmenu > li > a:hover,
 #mainmenu > li > a:focus {
     text-decoration: none;
-    background-color: #73b9ff;
+    background-color: #666;
     color: #fff;
     box-shadow: 0 1px 0 #000000, 0 0 -1px 0 0 rgba(255, 255, 255, 0.2) inset;
     -moz-box-shadow: 0 1px 0 #000000, -1px 0 0 rgba(255, 255, 255, 0.2) inset;
@@ -2916,7 +2916,7 @@ input[type="submit"].btn.btn-mini {
 #mainmenu > .active > a:hover,
 #mainmenu > .active > a:focus {
     color: #fff;
-    background-color: #73b9ff;
+    background-color: #666;
 }
 #mainmenu > li > ul > li > a {
     background: inherit;
@@ -7241,9 +7241,6 @@ h6 {
 	text-decoration: none;
 	color: #fff;
     background-color: #2184cd;
-    background-image:-webkit-linear-gradient(top, #41a1d6, #2184cd);
-    background-image:-o-linear-gradient(top, #41a1d6, #2184cd);
-    background-image:-moz-linear-gradient(top, #41a1d6, #2184cd);
 }
 @media (max-width: 480px) {
 	.item-info > span {
