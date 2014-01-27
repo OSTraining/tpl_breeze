@@ -132,6 +132,32 @@ textarea {
 #footer h3.modtitle{
 
 }
+.article-info dd, .article-info dt{
+    display: inline-block;
+}
+.tags{
+    margin-bottom: 10px;
+}
+#search_searchword{
+    margin-bottom: 0;
+}
+.searchoptions label{
+    display: inline-block;
+    margin-right:20px;
+}
+.searchoptions input[type="checkbox"]{
+    margin-top:0;
+}
+.searchoptions{
+
+}
+.searchintro{
+    min-width: 30%;
+}
+#searchForm{
+    background: #f7f7f7;
+    padding: 25px;
+}
 @media print {
 	* {
 		text-shadow: none !important;
@@ -736,7 +762,7 @@ dd {
 }
 .dl-horizontal dt {
 	float: left;
-	width: 160px;
+	width: 20px;
 	clear: left;
 	text-align: right;
 	overflow: hidden;
@@ -744,7 +770,7 @@ dd {
 	white-space: nowrap;
 }
 .dl-horizontal dd {
-	margin-left: 180px;
+	margin-left: 40px;
 }
 hr {
 	margin: 18px 0;
@@ -2185,7 +2211,7 @@ button.close {
 	border: 0;
 	-webkit-appearance: none;
 }
-.btn {
+.btn, .button {
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;
@@ -3960,9 +3986,9 @@ ul li [class^="icon-"], ul li [class*=" icon-"]{
 	padding: 5px 14px;
 	background-color: #fff;
 	border: 1px solid #ddd;
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }
 .pager li > a:hover,
 .pager li > a:focus {
