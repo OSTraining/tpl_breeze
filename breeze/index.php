@@ -75,6 +75,9 @@ if ($this->params->get('logoFile'))
 // color scheme
 $color_scheme = $this->params->get('colorScheme', '#2184CD');
 
+// hover color
+$hover_color = $this->params->get('hoverColor', '#41A1D6');
+
 // Add JavaScript Frameworks
 JHtml::_('bootstrap.framework');
 $doc->addScript('templates/' .$this->template. '/js/template.js');
@@ -82,7 +85,17 @@ $doc->addScript('templates/' .$this->template. '/js/template.js');
 // Add Stylesheets
 $doc->addStyleSheet('templates/'.$this->template.'/css/template.css');
 $doc->addStyleSheet('templates/system/css/general.css');
-$doc->addStyleSheet('templates/'.$this->template.'/css/font-awesome/css/font-awesome.min.css');
+
+// font awesome
+if ($this->params->get('fontAwesome'))
+{
+    $doc->addStyleSheet('templates/'.$this->template.'/css/font-awesome/css/font-awesome.min.css');
+}
+
+//custom css
+if( file_exists('templates/'.$this->template.'/css/custom.css')){
+    $doc->addStyleSheet('templates/'.$this->template.'/css/custom.css');
+}
 
 // Load optional RTL Bootstrap CSS
 JHtml::_('bootstrap.loadCss', false, $this->direction);
@@ -96,15 +109,23 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
         a{
             color:<?php echo $color_scheme; ?>;
         }
-        #footer h3.page-header{
+        #footer{
             border-color:<?php echo $color_scheme; ?>;
         }
-        .btn-primary, .navigation, #mainmenu > li > ul > li > a:hover,
+        .btn-primary,
+        .navigation,
+        #mainmenu > li > ul > li > a:hover,
         .navigation .nav-child li > a:hover,
         .navigation .nav-child li > a:focus,
         .navigation .nav-child:hover > a{
             background-color:<?php echo $color_scheme; ?>;
-            *background-color:<?php echo $color_scheme; ?>;
+        }
+        #mainmenu > .active > a,
+        #mainmenu > .active > a:hover,
+        #mainmenu > .active > a:focus,
+        #mainmenu > li > a:hover,
+        #mainmenu > li > a:focus {
+            background-color: <?php echo $hover_color; ?>;
         }
     </style>
     <?php

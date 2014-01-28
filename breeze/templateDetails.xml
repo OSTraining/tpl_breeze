@@ -55,11 +55,21 @@
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
-
+                <field name="fontAwesome"
+                       type="radio"
+                       class="btn-group btn-group-yesno"
+                       default="1"
+                       label="Enable font awesome?"
+                       description="Do you want to use font awesome?"
+                        >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
                 <field name="googleFontName" class="" type="text" default="Open+Sans:400,300,300italic,700,600,800"
-                       label="Google Font Name"
+                       label="Google font name"
                        description="Set your Google Font. i.e. Open+Sans" />
                 <field name="colorScheme" type="color" default="#2184CD" label="Color scheme" description="Set Color links, menu and other elements" />
+                <field name="hoverColor" type="color" default="#41A1D6" label="Color scheme" description="Set background-color for hover event in menu" />
             </fieldset>
         </fields>
     </config>

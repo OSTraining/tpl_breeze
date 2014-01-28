@@ -119,12 +119,13 @@ textarea {
 }
 #footer{
     background:#f7f7f7;
+    border-top: 3px solid #666666;
 }
 #footer p, #footer a, #footer ul li, #footer div{
 
 }
 #footer h3.page-header{
-    border-bottom:3px solid #2184cd;
+
 }
 #footer-a, #footer-b, #footer-c{
     padding: 19px 26px;
@@ -157,6 +158,17 @@ textarea {
 #searchForm{
     background: #f7f7f7;
     padding: 25px;
+}
+.items-more .nav-tabs.nav-stacked > li > a{
+    border:0px;
+}
+#search_searchword{
+    width:auto;
+    float: left;
+    margin-right: 5px;
+}
+.searchoptions button.button{
+    float: left;
 }
 @media print {
 	* {
@@ -1714,6 +1726,7 @@ legend + .control-group {
 }
 table {
 	max-width: 100%;
+    width: 100%;
 	background-color: transparent;
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -2366,8 +2379,8 @@ input[type="button"].btn-block {
 .btn-primary.disabled,
 .btn-primary[disabled] {
 	color: #fff;
-	background-color: #0044cc;
-	*background-color: #003bb3;
+	background-color: #666;
+	*background-color: #666;
 }
 .btn-primary:active,
 .btn-primary.active {
@@ -2861,6 +2874,9 @@ input[type="submit"].btn.btn-mini {
     background:#f7f7f7;
     color: #666;
     text-decoration: none;
+}
+.nav li.active > ul > li.active > a{
+    color:#fff;
 }
 .navigation {
     margin-top:1px;
@@ -3840,11 +3856,9 @@ input[type="submit"].btn.btn-mini {
 	margin-left: 0;
 	margin-bottom: 0;
 	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
 	border-radius: 4px;
-	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-	box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 .pagination ul > li {
 	display: inline;
@@ -4404,7 +4418,7 @@ a.badge:focus {
 }
 .label-info[href],
 .badge-info[href] {
-	background-color: #2d6987;
+
 }
 .label-inverse,
 .badge-inverse {
@@ -6151,7 +6165,7 @@ fieldset.radio.btn-group {
 }
 .page-header {
 	margin: 2px 0px 15px 0px;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
     border-bottom: 1px solid #ccc;
 }
 .input-prepend .chzn-container-single .chzn-single {
@@ -7128,13 +7142,13 @@ h1 {
     text-transform:uppercase;
 }
 h2 {
-	font-size: 18px;
-	line-height: 22px;
+	font-size: 20px;
+	line-height: 25px;
     text-transform:uppercase;
 }
 h3 {
-	font-size: 15px;
-	line-height: 20px;
+	font-size: 18px;
+	line-height: 23px;
     text-transform:uppercase;
 }
 h4 {
