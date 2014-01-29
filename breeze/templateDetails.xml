@@ -37,6 +37,7 @@
         <position>bottom-a</position>
         <position>bottom-b</position>
         <position>bottom-c</position>
+        <position>credits</position>
         <position>debug</position>
     </positions>
     <config>

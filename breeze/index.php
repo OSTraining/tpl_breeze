@@ -253,7 +253,10 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
                 </div>
             <?php endif; ?>
             <!-- End footer -->
-            <p class="copyright-ost">&copy; <?php echo $sitename; ?> <?php echo date('Y');?></p>
+            <div class="row-fluid copyright-ost">
+                <div class="span6">&copy; <?php echo $sitename; ?> <?php echo date('Y');?></div>
+                <div class="span6"><jdoc:include type="modules" name="credits" style="no" /></div>
+            </div>
         </div>
     </footer>
     <!-- End Footer -->
