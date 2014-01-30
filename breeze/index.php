@@ -105,6 +105,7 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
 <head>
 	<jdoc:include type="head" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <style>
         a{
             color:<?php echo $color_scheme; ?>;
