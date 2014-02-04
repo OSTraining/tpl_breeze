@@ -1,8 +1,8 @@
 /**
  * @package     Joomla.Site
- * @subpackage  Templates.protostar
- * @copyright   Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @subpackage  Templates.breeze
+ * @copyright   Copyright (C) 2009, 2013 OSTraining.com
+ * @license     GNU General Public License version 2 or later; see license.txt
  * @since       3.2
  */
 

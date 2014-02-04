@@ -66,10 +66,10 @@ if ($this->countModules('footer-a and footer-b and footer-c'))
 // Logo file
 if ($this->params->get('logoFile'))
 {
-    $logo = '<img src="' . JUri::root() . $this->params->get('logoFile') . '" alt="'. $sitename .'" />';
+    $logo = '<img src="' . $this->baseurl . '/' . $this->params->get('logoFile') . '" alt="'. $sitename .'" />';
 }else
 {
-    $logo = '<img src="' . JUri::root() . 'templates/' . $this->template . '/images/logo.png" alt="'. $sitename .'" />';
+    $logo = '<img src="' . $this->baseurl . '/templates/' . $this->template . '/images/logo.png" alt="'. $sitename .'" />';
 }
 
 // color scheme
@@ -81,18 +81,26 @@ $hover_color = $this->params->get('hoverColor', '#41A1D6');
 // Add JavaScript Frameworks
 JHtml::_('bootstrap.framework');
 $doc->addScript('templates/' .$this->template. '/js/template.js');
+$doc->addScript('templates/' .$this->template. '/js/jquery.mobilemenu.js');
 
 // Add Stylesheets
-$doc->addStyleSheet('templates/'.$this->template.'/css/template.css');
 $doc->addStyleSheet('templates/system/css/general.css');
+$doc->addStyleSheet('templates/'.$this->template.'/css/template.css');
+
+// Mobile menu
+if ($this->params->get('mobileMenu', 1))
+{
+    $doc->addScript('templates/' .$this->template. '/js/mobilemenu.js');
+    $doc->addStyleSheet('templates/'.$this->template.'/css/mobilemenu.css');
+}
 
 // font awesome
-if ($this->params->get('fontAwesome'))
+if ($this->params->get('fontAwesome', 1))
 {
     $doc->addStyleSheet('templates/'.$this->template.'/css/font-awesome/css/font-awesome.min.css');
 }
 
-//custom css
+// custom css
 if( file_exists('templates/'.$this->template.'/css/custom.css')){
     $doc->addStyleSheet('templates/'.$this->template.'/css/custom.css');
 }

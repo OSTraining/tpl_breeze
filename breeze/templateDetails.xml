@@ -61,8 +61,16 @@
                        class="btn-group btn-group-yesno"
                        default="1"
                        label="Enable font awesome?"
-                       description="Do you want to use font awesome?"
-                        >
+                       description="Do you want to use font awesome?">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="mobileMenu"
+                       type="radio"
+                       class="btn-group btn-group-yesno"
+                       default="1"
+                       label="Enable dropdown Mobile Menu?"
+                       description="Do you want to use dropdown Mobile Menu?">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
@@ -70,7 +78,7 @@
                        label="Google font name"
                        description="Set your Google Font. i.e. Open+Sans" />
                 <field name="colorScheme" type="color" default="#2184CD" label="Color scheme" description="Set Color links, menu and other elements" />
-                <field name="hoverColor" type="color" default="#41A1D6" label="Color scheme" description="Set background-color for hover event in menu" />
+                <field name="hoverColor" type="color" default="#41A1D6" label="Menu active background" description="Set background-color for hover/active event in menu" />
             </fieldset>
         </fields>
     </config>
