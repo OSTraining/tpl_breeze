@@ -166,6 +166,7 @@ textarea {
     width:auto;
     float: left;
     margin-right: 5px;
+	max-width: 166px;
 }
 .searchoptions button.button{
     float: left;
@@ -909,8 +910,6 @@ legend {
 	width: 100%;
 	padding: 0;
 	margin-bottom: 18px;
-	font-size: 19.5px;
-	line-height: 36px;
 	color: #333;
 	border: 0;
 	border-bottom: 1px solid #e5e5e5;
@@ -970,7 +969,7 @@ input[type="color"],
 input,
 textarea,
 .uneditable-input {
-	width: 206px;
+	width: 80%;
 }
 textarea {
 	height: auto;
@@ -1045,7 +1044,7 @@ input[type="file"] {
 	line-height: 28px;
 }
 select {
-	width: 220px;
+	max-width: 220px;
 	border: 1px solid #ccc;
 	background-color: #fff;
 }
@@ -1698,7 +1697,7 @@ legend + .control-group {
 .form-horizontal .control-label {
 	float: left;
 	width: 160px;
-	padding-top: 5px;
+	padding-top: 0px;
 	text-align: right;
 }
 .form-horizontal .controls {
