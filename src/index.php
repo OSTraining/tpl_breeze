@@ -188,12 +188,12 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
                     <!-- Start Left -->
                 <?php endif; ?>
                 <!-- Start Content -->
-                <main id="content" role="main" class="<?php echo $span_component; ?>">
+                <div id="content" role="main" class="<?php echo $span_component; ?>">
                     <jdoc:include type="modules" name="bodytop" style="xhtml" />
                     <jdoc:include type="message" />
                     <jdoc:include type="component" />
                     <jdoc:include type="modules" name="bodybottom" style="xhtml" />
-                </main>
+                </div>
                 <!-- End Content -->
                 <?php if ($this->countModules('right')) : ?>
                     <div id="right-content" class="span3">
