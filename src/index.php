@@ -151,6 +151,7 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
     <?php
     }
     ?>
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body class="myitemid-<?php echo $itemid; ?>">
 
@@ -158,7 +159,7 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
     <div class="body">
         <div class="container">
             <!-- Header -->
-            <header class="row-fluid" role="banner">
+            <div class="row-fluid">
                 <div class="span3">
                     <a class="brand pull-left" href="<?php echo $this->baseurl; ?>">
                         <?php echo $logo; ?>
@@ -169,7 +170,7 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
                         <jdoc:include type="modules" name="top" style="none" />
                     </div>
                 </div>
-            </header>
+            </div>
             <?php if ($this->countModules('menu')) : ?>
                 <nav class="navigation" role="navigation">
                     <jdoc:include type="modules" name="menu" style="none" />
