@@ -4198,6 +4198,10 @@ ul li [class^="icon-"], ul li [class*=" icon-"]{
     min-width:220px;
     width:auto;
 }
+#users-profile-custom .dl-horizontal dt{
+    margin-right:10px;
+    width:auto;
+}
 .popover.top {
 	margin-top: -10px;
 }
