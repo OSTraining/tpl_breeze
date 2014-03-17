@@ -4194,6 +4194,10 @@ ul li [class^="icon-"], ul li [class*=" icon-"]{
 	box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 	white-space: normal;
 }
+.chzn-container{
+    min-width:220px;
+    width:auto;
+}
 .popover.top {
 	margin-top: -10px;
 }
