@@ -4198,7 +4198,7 @@ ul li [class^="icon-"], ul li [class*=" icon-"]{
     min-width:220px;
     width:auto;
 }
-#users-profile-custom .dl-horizontal dt{
+#users-profile-custom .dl-horizontal dt, #users-profile-core .dl-horizontal dt {
     margin-right:10px;
     width:auto;
     min-width:140px;
