@@ -78,6 +78,9 @@ $color_scheme = $this->params->get('colorScheme', '#2184CD');
 // hover color
 $hover_color = $this->params->get('hoverColor', '#41A1D6');
 
+// Google font
+$google_font = explode( ':', $this->params->get('googleFontName') );
+
 // Add JavaScript Frameworks
 JHtml::_('bootstrap.framework');
 $doc->addScript('templates/' .$this->template. '/js/template.js');
@@ -146,7 +149,7 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
         <link href='//fonts.googleapis.com/css?family=<?php echo $this->params->get('googleFontName');?>' rel='stylesheet' type='text/css' />
         <style type="text/css">
             body{
-                font-family: '<?php echo str_replace('+', ' ', $this->params->get('googleFontName'));?>', sans-serif;
+                font-family: '<?php echo str_replace('+', ' ', $google_font[0]);?>', sans-serif;
             }
         </style>
     <?php
