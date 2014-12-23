@@ -48,21 +48,18 @@
       <td>
         <?php echo JText::_( 'Search Keyword' ) .': <b>'. $this->escape($this->searchword) .'</b>'; ?>
       </td>
-      <td style="text-align:right;">
+      <td class="text-right">
         <?php if($this->total > 0) : ?>
           <label for="limit">
             <?php echo JText::_( 'Display Num' ); ?>
           </label>
-          <?php echo $this->pagination->getLimitBox( ); ?>
+          <div class="search-limit-box">
+			  <?php echo $this->pagination->getLimitBox( ); ?>
+		  </div>
+		  <div class="search-pages-box">
+			  <?php echo $this->pagination->getPagesCounter(); ?>
+		  </div>
         <?php endif; ?>
-      </td>
-    </tr>
-    <tr class="bottom">
-      <td>
-        <?php echo $this->result; ?>
-      </td>
-      <td style="text-align:right;">
-				<?php echo $this->pagination->getPagesCounter(); ?>
       </td>
     </tr>
   </table>
