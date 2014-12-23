@@ -37,6 +37,6 @@ foreach( $this->results as $result ) : ?>
   </div>
 <?php endforeach; ?>
 
-<div align="center">
+<div class="pagination">
   <?php echo $this->pagination->getPagesLinks( ); ?>
 </div>
