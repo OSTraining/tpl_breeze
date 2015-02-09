@@ -3011,6 +3011,9 @@ input[type="submit"].btn.btn-mini {
     -moz-background-clip: padding;
     background-clip: padding-box;
 }
+.navigation .nav > li > .nav-child .nav-child {
+	margin-top: 3px;
+}
 .nav > li a {
     display: block;
     background: #3399FF;
@@ -7267,19 +7270,21 @@ h6 {
 	color: #fff;
 	white-space: nowrap;
 }
-.navigation .nav > li {
+.navigation .nav li {
 	position: relative;
 }
 .navigation .nav > li:hover > .nav-child,
-.navigation .nav > li > a:focus + .nav-child {
+.navigation .nav > li > a:focus + .nav-child,
+.navigation .nav li li:hover > .nav-child,
+.navigation .nav li li > a:focus + .nav-child {
 	display: block;
 }
-.navigation .nav-child:before {
+.navigation .nav > li > .nav-child:before {
 	position: absolute;
 	display: inline-block;
 	content: '';
 }
-.navigation .nav-child:after {
+.navigation .nav > li > .nav-child:after {
 	position: absolute;
 	display: inline-block;
 	content: '';
@@ -7291,6 +7296,21 @@ h6 {
 	color: #fff;
     background-color: #2184cd;
 }
+.navigation .nav li li .nav-child {
+	top: -8px;
+	left: 100%;
+}
+.navigation .nav li li .nav-child:before {
+	position: absolute;
+	display: inline-block;
+  	content: '';
+}
+.navigation .nav li li .nav-child:after {
+  	position: absolute;
+  	display: inline-block;
+  	content: '';
+}
+
 @media (max-width: 480px) {
 	.item-info > span {
 		display: block;
