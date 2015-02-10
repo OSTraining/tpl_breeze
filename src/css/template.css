@@ -2943,7 +2943,7 @@ input[type="submit"].btn.btn-mini {
     -o-box-shadow: 0 1px 0 #000000, -1px 0 0 rgba(255, 255, 255, 0.2) inset;
 }
 #mainmenu > li > a,
-#mainmenu > li > span.nav-header {
+#mainmenu > li > span {
     padding: 15px 20px;
     color: #fff;
     font-size:14px;
@@ -2955,13 +2955,14 @@ input[type="submit"].btn.btn-mini {
     -moz-box-shadow: -1px 0 0 rgba(255, 255, 255, 0.2) inset;
     -webkit-box-shadow: -1px 0 0 rgba(255, 255, 255, 0.2) inset;
     -o-box-shadow: -1px 0 0 rgba(255, 255, 255, 0.2) inset;
+	display: block;
 }
 #mainmenu > .active > a,
 #mainmenu > .active > a:hover,
 #mainmenu > .active > a:focus,
-#mainmenu > .active > span.nav-header,
-#mainmenu > .active > span.nav-header:hover,
-#mainmenu > .active > span.nav-header:focus {
+#mainmenu > .active > span,
+#mainmenu > .active > span:hover,
+#mainmenu > .active > span:focus {
     color: #fff;
     background-color: #666;
 }
@@ -2975,7 +2976,7 @@ input[type="submit"].btn.btn-mini {
     -webkit-border-radius: 0;
     -o-border-radius: 0;
 }
-.nav span.nav-header{
+.nav span{
 	text-transform: none;
 	text-shadow: none;
 	font-weight: normal;
@@ -3111,7 +3112,7 @@ input[type="submit"].btn.btn-mini {
 }
 .nav-tabs > li > a,
 .nav-pills > li > a,
-.nav-pills > li > span.nav-header{
+.nav-pills > li > span{
 	padding-right: 12px;
 	padding-left: 12px;
 	margin-right: 2px;

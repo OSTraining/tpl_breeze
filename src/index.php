@@ -136,13 +136,13 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
         #mainmenu > .active > a,
         #mainmenu > .active > a:hover,
         #mainmenu > .active > a:focus,
-        #mainmenu > .active > span.nav-header,
-        #mainmenu > .active > span.nav-header:hover,
-        #mainmenu > .active > span.nav-header:focus,
+        #mainmenu > .active > span,
+        #mainmenu > .active > span:hover,
+        #mainmenu > .active > span:focus,
         #mainmenu > li > a:hover,
         #mainmenu > li > a:focus,
-        #mainmenu > li > span.nav-header:hover,
-        #mainmenu > li > span.nav-header:focus {
+        #mainmenu > li > span:hover,
+        #mainmenu > li > span:focus {
             background-color: <?php echo $hover_color; ?>;
         }
     </style>
