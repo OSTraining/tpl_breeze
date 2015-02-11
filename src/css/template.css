@@ -2892,10 +2892,12 @@ input[type="submit"].btn.btn-mini {
 .nav > li > ul > li > span{
     padding-left:30px;
 }
-.nav > li > ul > li > ul > li > a {
+.nav > li > ul > li > ul > li > a,
+.nav > li > ul > li > ul > li > span {
 	padding-left:50px;
 }
-.nav > li > ul > li > ul > li > ul > li > a {
+.nav > li > ul > li > ul > li > ul > li > a,
+.nav > li > ul > li > ul > li > ul > li > span {
 	padding-left:80px;
 }
 .nav > li > ul > li > a:hover {
@@ -7314,7 +7316,8 @@ h6 {
 .navigation .nav > li:hover > .nav-child,
 .navigation .nav > li > a:focus + .nav-child,
 .navigation .nav li li:hover > .nav-child,
-.navigation .nav li li > a:focus + .nav-child {
+.navigation .nav li li > a:focus + .nav-child,
+.navigation .nav li li > span:focus + .nav-child{
 	display: block;
 }
 .navigation .nav > li > .nav-child:before {
