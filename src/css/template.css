@@ -7313,22 +7313,18 @@ h6 {
 .navigation .nav li {
 	position: relative;
 }
+.navigation .nav > li > .nav-child:before,
+.navigation .nav > li > .nav-child:after {
+	position: absolute;
+	display: inline-block;
+	content: '';
+}
 .navigation .nav > li:hover > .nav-child,
 .navigation .nav > li > a:focus + .nav-child,
 .navigation .nav li li:hover > .nav-child,
 .navigation .nav li li > a:focus + .nav-child,
 .navigation .nav li li > span:focus + .nav-child{
 	display: block;
-}
-.navigation .nav > li > .nav-child:before {
-	position: absolute;
-	display: inline-block;
-	content: '';
-}
-.navigation .nav > li > .nav-child:after {
-	position: absolute;
-	display: inline-block;
-	content: '';
 }
 .navigation .nav-child li > a:hover,
 .navigation .nav-child li > a:focus,
