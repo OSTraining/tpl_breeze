@@ -2860,20 +2860,26 @@ input[type="submit"].btn.btn-mini {
 	margin-bottom: 18px;
 	list-style: none;
 }
-.nav li > a {
+.nav li > a,
+.nav li > span {
     display: block;
     color:#fff;
     padding: 10px 14px;
     font-size: 12px;
+	line-height: 25px;
 }
 .nav li.active > a,
 .nav li > a:hover,
-.nav li > a:focus{
+.nav li > a:focus,
+.nav li.active > span,
+.nav li > span:hover,
+.nav li > span:focus {
     background:#f7f7f7;
     color: #666;
     text-decoration: none;
 }
-.nav li.active > ul > li.active > a{
+.nav li.active > ul > li.active > a,
+.nav li.active > ul > li.active > span{
     color:#fff;
 }
 .navigation {
@@ -2885,7 +2891,8 @@ input[type="submit"].btn.btn-mini {
 .nav > li ul{
     margin-top: 1px;
 }
-.nav > li > ul > li > a {
+.nav > li > ul > li > a,
+.nav > li > ul > li > span{
     padding-left:30px;
 }
 .nav > li > ul > li > ul > li > a {
@@ -2894,7 +2901,7 @@ input[type="submit"].btn.btn-mini {
 .nav > li > ul > li > a:hover {
     text-decoration: none;
 }
-.nav > li {
+.nav li {
     margin-bottom: 1px;
 }
 .nav > li > a > img {
