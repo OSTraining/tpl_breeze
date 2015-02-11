@@ -2878,10 +2878,6 @@ input[type="submit"].btn.btn-mini {
     color: #666;
     text-decoration: none;
 }
-.nav li.active > ul > li.active > a,
-.nav li.active > ul > li.active > span{
-    color:#fff;
-}
 .navigation {
     margin-top:1px;
 }
@@ -2896,7 +2892,10 @@ input[type="submit"].btn.btn-mini {
     padding-left:30px;
 }
 .nav > li > ul > li > ul > li > a {
-    padding-left:50px;
+	padding-left:50px;
+}
+.nav > li > ul > li > ul > li > ul > li > a {
+	padding-left:80px;
 }
 .nav > li > ul > li > a:hover {
     text-decoration: none;
@@ -2972,6 +2971,10 @@ input[type="submit"].btn.btn-mini {
 #mainmenu > .active > span:focus {
     color: #fff;
     background-color: #666;
+}
+#mainmenu > .active > ul li.active a,
+#mainmenu > .active > ul li.active span{
+	color:#fff;
 }
 #mainmenu > li > ul > li > a {
     background: inherit;
