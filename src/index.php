@@ -169,7 +169,7 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
     <div class="body">
         <div class="container">
             <!-- Header -->
-            <div class="row-fluid">
+            <div class="row-fluid" id="top-brand">
                 <div class="span3">
                     <a class="brand pull-left" href="<?php echo $this->baseurl; ?>">
                         <?php echo $logo; ?>

@@ -4990,6 +4990,20 @@ a.badge:focus {
 	.controls-row [class*="span"] + [class*="span"] {
 		margin-left: 0;
 	}
+	.header-search.pull-right{
+		float: none;
+		text-align: center;
+	}
+	#mod-search-searchword {
+		margin: 5px 0 15px;
+		max-width: 150px;
+	}
+	.brand.pull-left{
+		float: none;
+	}
+	#top-brand{
+		text-align: center;
+	}
 }
 @media (max-width: 480px) {
 	.nav-collapse {
