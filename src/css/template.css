@@ -2881,7 +2881,8 @@ input[type="submit"].btn.btn-mini {
 .navigation {
     margin-top:1px;
 }
-.navigation .nav > li a{
+.navigation .nav > li a,
+.navigation .nav > li span {
 	background: none;
 }
 .nav > li ul{
@@ -7296,7 +7297,8 @@ h6 {
 	background-color: #e5e5e5;
 	border-bottom: 1px solid #fff;
 }
-.navigation .nav-child a {
+.navigation .nav-child a,
+.navigation .nav-child span {
 	display: block;
 	padding: 3px 20px;
 	clear: both;
@@ -7327,7 +7329,10 @@ h6 {
 }
 .navigation .nav-child li > a:hover,
 .navigation .nav-child li > a:focus,
-.navigation .nav-child:hover > a {
+.navigation .nav-child:hover > a,
+.navigation .nav-child li > span:hover,
+.navigation .nav-child li > span:focus,
+.navigation .nav-child:hover > span {
 	text-decoration: none;
 	color: #fff;
     background-color: #2184cd;

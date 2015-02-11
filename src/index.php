@@ -131,6 +131,10 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
         .navigation .nav-child li > a:focus,
         .navigation .nav-child:hover > a,
         .nav > li a,
+        #mainmenu > li > ul > li > span:hover,
+        .navigation .nav-child li > span:hover,
+        .navigation .nav-child li > span:focus,
+        .navigation .nav-child:hover > span,
         .nav > li span {
             background-color:<?php echo $color_scheme; ?>;
         }
