@@ -47,3 +47,4 @@ nb-configuration.xml
 _notes/
 
 build.properties
+*.zip
