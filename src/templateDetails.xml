@@ -7,7 +7,7 @@
     <license>GPL v3</license>
     <authorEmail>info@ostraining.com</authorEmail>
     <authorUrl>http://www.ostraining.com</authorUrl>
-    <version>2.3.2</version>
+    <version>2.4.2</version>
     <description><![CDATA[<p>OSTraining Breeze. A beautiful and easy-to-use-template from OSTraining<br/><img src="../templates/ostrainingbreeze/template_thumbnail.png" alt="OSTraining" /></p>]]></description>
 
     <files>
@@ -109,4 +109,7 @@
             </fieldset>
         </fields>
     </config>
+    <updateservers>
+        <server type="extension" priority="1" name="Breeze Updates"><![CDATA[http://deploy.ostraining.com/client/update/free/stable/tpl_breeze]]></server>
+    </updateservers>
 </extension>
