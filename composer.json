@@ -1,13 +1,13 @@
 {
-    "name"             : "OSTraining/OSTraining: Breeze",
+    "name"             : "OSTraining/Breeze",
     "description"      : "OSTraining Breeze",
     "minimum-stability": "stable",
     "license"          : "GPL-2+",
     "type"             : "joomla.template",
     "extra"            : {
-        "element"        : "ostrainingbreeze",
+        "element"        : "tpl_breeze",
         "element-short"  : "breeze",
-        "name"           : "OSTraining: Breeze",
+        "name"           : "Breeze",
         "client"         : "site",
         "package-license": "free"
     },
