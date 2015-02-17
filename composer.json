@@ -7,7 +7,7 @@
     "extra"            : {
         "element"        : "tpl_breeze",
         "element-short"  : "breeze",
-        "name"           : "Breeze",
+        "name"           : "OSTraining: Breeze",
         "client"         : "site",
         "package-license": "free"
     },
