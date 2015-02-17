@@ -5,7 +5,7 @@
     "license"          : "GPL-2+",
     "type"             : "joomla.template",
     "extra"            : {
-        "element"        : "tpl_breeze",
+        "element"        : "ostrainingbreeze",
         "element-short"  : "breeze",
         "name"           : "OSTraining: Breeze",
         "client"         : "site",
