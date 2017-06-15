@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<updates>
+    <update>
+        <name>OSTraining Breeze</name>
+        <description>OSTraining Breeze Updates</description>
+        <element>ostrainingbreeze</element>
+        <type>template</type>
+        <client>site</client>
+        <version>2.4.0</version>
+        <infourl title="OSTraining Breeze Update">https://www.ostraining.com</infourl>
+        <downloads>
+            <downloadurl type="full" format="zip">https://github.com/OSTraining/tpl_breeze/releases/download/v2.4.0/tpl_breeze_free_2.4.0.zip</downloadurl>
+        </downloads>
+        <tags>
+            <tag>stable</tag>
+        </tags>
+        <targetplatform name="joomla" version=".*"/>
+    </update>
+</updates>

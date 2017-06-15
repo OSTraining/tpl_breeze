@@ -1,33 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.1" type="template" client="site">
     <name>OSTraining: Breeze</name>
-    <creationDate>December 2014</creationDate>
+    <creationDate>June 15 2017</creationDate>
     <author>OSTraining</author>
-    <copyright>Copyright (C) 2014 OSTraining.com</copyright>
+    <copyright>Copyright (C) 2017 OSTraining.com</copyright>
     <license>GPL v3</license>
     <authorEmail>info@ostraining.com</authorEmail>
-    <authorUrl>http://www.ostraining.com</authorUrl>
-    <version>2.3.4</version>
+    <authorUrl>https://www.ostraining.com</authorUrl>
+    <version>2.4.0</version>
     <description><![CDATA[<p>OSTraining Breeze. A beautiful and easy-to-use-template from OSTraining<br/><img src="../templates/ostrainingbreeze/template_thumbnail.png" alt="OSTraining" /></p>]]></description>
-
-    <alledia>
-        <element>ostrainingbreeze</element>
-        <namespace>Breeze</namespace>
-        <license>free</license>
-        <relatedExtensions>
-            <extension
-                    type="library"
-                    element="allediaframework"
-                    >AllediaFramework</extension>
-            <extension
-                    type="plugin"
-                    group="system"
-                    element="ossystem"
-                    publish="true"
-                    ordering="first"
-                    >OSSystem</extension>
-        </relatedExtensions>
-    </alledia>
 
     <files>
         <filename>index.php</filename>
@@ -128,7 +109,9 @@
             </fieldset>
         </fields>
     </config>
+
     <updateservers>
-        <server type="extension" priority="1" name="Breeze Updates"><![CDATA[http://deploy.ostraining.com/client/update/free/stable/tpl_breeze]]></server>
+        <server type="extension" priority="1" name="Breeze Updates"><![CDATA[https://raw.githubusercontent.com/OSTraining/tpl_breeze/master/updates.xml]]></server>
     </updateservers>
+
 </extension>
