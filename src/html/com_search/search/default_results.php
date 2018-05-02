@@ -12,7 +12,7 @@ foreach( $this->results as $result ) : ?>
           <a href="<?php echo JRoute::_($result->href); ?>">
         <?php endif;
 
-        echo $this->escape($result->title);
+        echo $result->title;
 
         if ( $result->href ) : ?>
           </a>
